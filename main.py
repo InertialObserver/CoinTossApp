@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 import random
 
-
+# Bug: Clicking "Heads" multiple times without clicking "Start over" is possible. Need to fix.
 class CoinTossBoxLayout(BoxLayout):
     def choice(self, guess):
         output = guess
@@ -10,7 +10,7 @@ class CoinTossBoxLayout(BoxLayout):
             self.ids.result.text = output
 
     def get_random(self):
-        random_list = ['Right!', 'Nope, try again!', 'Impeach Trump!']
+        random_list = ['Right!', 'Nope, try again!', 'Need Coffee!', 'Still not Heads']
         random_choice = random.choice(random_list)
         self.ids.result.text = random_choice
 
