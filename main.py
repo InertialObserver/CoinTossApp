@@ -4,7 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 
 class CoinTossBoxLayout(BoxLayout):
     def choice(self, guess):
-        output = "You clicked the " + guess + " button!"
+        output = guess
         self.ids.result.text = output
 
 
