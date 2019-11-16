@@ -5,10 +5,11 @@ from kivy.uix.boxlayout import BoxLayout
 class CoinTossBoxLayout(BoxLayout):
     def choice(self, guess):
         output = guess
-        self.ids.result.text = output
+        if self.ids.result.text == "":  # if the result box is empty, then print the result. If there is already a result, do nothing.
+            self.ids.result.text = output
 
     def clear(self):
-        self.ids.result.text = ""
+        self.ids.result.text = "" # erases the results so user can guess again
 
 
 class CoinTossApp(App):
