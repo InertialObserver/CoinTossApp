@@ -7,6 +7,9 @@ class CoinTossBoxLayout(BoxLayout):
         output = guess
         self.ids.result.text = output
 
+    def clear(self):
+        self.ids.result.text = ""
+
 
 class CoinTossApp(App):
     def build(self):
